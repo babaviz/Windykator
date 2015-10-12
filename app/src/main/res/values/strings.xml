@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Windykator</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_person">Windykator</string>
+    <string name="title_activity_windykator">Windykator</string>
+    <string name="title_activity_add_debt">Windykator</string>
+</resources>

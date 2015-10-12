@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mateusz.windykator.Activities.WindykatorActivity">
+    <item
+        android:id="@+id/lend"
+        android:orderInCategory="101"
+        android:title="Pożycza"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/receive"
+        android:orderInCategory="102"
+        android:title="Oddaje"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/edit"
+        android:orderInCategory="103"
+        android:title="Edytuj"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/delete"
+        android:orderInCategory="100"
+        android:title="Usun"
+        android:icon="@drawable/abc_ic_clear_mtrl_alpha"
+        app:showAsAction="ifRoom" />
+</menu>
