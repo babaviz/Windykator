@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.mateusz.windykator.pojos.Debt;
 import com.mateusz.windykator.pojos.Person;
@@ -19,7 +20,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     //Static variables
     //DB version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     //DB name
     private static final String DATABASE_NAME = "windykator";
@@ -64,7 +65,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 + KEY_VALUE + " REAL, "
                 + KEY_DESCRIPTION + " TEXT, "
                 + KEY_PERSON_ID + " TEXT, "
-                + KEY_ID + " INTEGER PRIMARY KEY, "
+                + KEY_ID + " INTEGER PRIMARY KEY "
                 + ")";
 
         db.execSQL(CREATE_PEOPLE_TABLE);
@@ -114,7 +115,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
         db.close();
 
-        return new Person(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getLong(4) == 1 ? true : false, cursor.getInt(0));
+        return new Person(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getLong(4) == 1, cursor.getInt(0));
     }
 
     // Getting All persons
@@ -144,17 +145,6 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
         // return contact list
         return personsList;
-    }
-
-    // Getting persons Count
-    public int getPersonsCount() {
-        String countQuery = "SELECT  * FROM " + TABLE_PEOPLE;
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        cursor.close();
-        db.close();
-        // return count
-        return cursor.getCount();
     }
 
     // Updating single person

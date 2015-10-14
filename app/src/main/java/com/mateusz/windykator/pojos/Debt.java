@@ -62,7 +62,7 @@ public class Debt implements Serializable {
 
     @Override
     public String toString() {
-        return description + "\n" + value;
+        return description + "\n" + String.format("%.2f",value);
     }
 
 }

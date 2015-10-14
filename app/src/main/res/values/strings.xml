@@ -6,4 +6,6 @@
     <string name="title_activity_add_person">Windykator</string>
     <string name="title_activity_windykator">Windykator</string>
     <string name="title_activity_add_debt">Windykator</string>
+    <string name="title_activity_debt_edit">DebtEdit</string>
+    <string name="title_activity_message_send">MessageSendActivity</string>
 </resources>

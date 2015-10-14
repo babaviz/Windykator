@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mateusz.windykator.Activities.DebtActivity">
+    tools:context="com.mateusz.windykator.activities.DebtActivity"
+    >
 
     <TextView
         android:id="@+id/titleText"
@@ -14,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Title" />
+        android:text="Title"
+        />
 
     <TextView
         android:id="@+id/textView2"
